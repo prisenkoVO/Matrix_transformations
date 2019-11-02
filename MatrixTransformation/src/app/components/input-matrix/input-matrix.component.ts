@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputMatrixComponent implements OnInit {
 
+  countColumns = [1,2,3]
+  countRows = [1,2,3]
+
   constructor() { }
 
   ngOnInit() {

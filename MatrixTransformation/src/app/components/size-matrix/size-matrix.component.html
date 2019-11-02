@@ -1,7 +1,7 @@
 <h4>Choose size of matrix</h4>
 <div class="d-flex align-items-center">
-    <input placeholder="m" class="m-2" style="width: 30px;">
+    <input placeholder="m" id="1" class="m-2" style="width: 30px;" #columns>
     x
-    <input placeholder="n" class="m-2" style="width: 30px;">
-    <button class="m-2">Choose</button>
+    <input placeholder="n" id="2" class="m-2" style="width: 30px;" #rows>
+    <button class="m-2" (click)="onSubmit(columns.value, rows.value)">Choose</button>
 </div>
