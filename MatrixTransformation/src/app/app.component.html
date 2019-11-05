@@ -1,5 +1,13 @@
 <h2>Matrix transformation</h2>
 <hr>
-<app-size-matrix></app-size-matrix>
+<h4>Choose size of matrix</h4>
+<div class="d-flex align-items-center">
+    <input placeholder="m" type="number" min="2" id="1" class="m-2" style="width: 100px;" (change)="onSubmit(columns.value, rows.value)" #columns>
+    x
+    <input placeholder="n" type="number" min="2" id="2" class="m-2" style="width: 100px;" (change)="onSubmit(columns.value, rows.value)" #rows>
+    <button class="m-2" (click)="onSubmit(columns.value, rows.value)">Choose</button>
+</div>
 <hr>
-<app-input-matrix></app-input-matrix>
+<app-input-matrix
+[listColumns]="listColumns"
+[listRows]="listRows"></app-input-matrix>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-matrix',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputMatrixComponent implements OnInit {
 
-  countColumns = [1,2,3]
-  countRows = [1,2,3]
+  @Input() listColumns:Array<number>
+  @Input() listRows:Array<number>
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngDoCheck(){
+    console.log(this.listColumns)
+    console.log(this.listRows)
   }
 
 }
