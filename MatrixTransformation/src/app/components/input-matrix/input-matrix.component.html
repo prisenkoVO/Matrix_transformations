@@ -1,14 +1,13 @@
-<ng-content></ng-content>
+<div>
+    <button class="m-2">Unit matrix</button>
+    <button class="m-2">Random discharged</button>
+    <button class="m-2">Random static matrix</button>
+    <button class="m-2">Gauss method</button>
+</div>
 <div class="d-flex flex-column">
-    <div *ngFor="let row of listRows" class="d-flex">
-        <div *ngFor="let column of listColumns" [id]="row">
-            <input [id]="column" type="number" class="m-2" style="width: 40px;" placeholder="a{{row}}{{column}}">
+    <div *ngFor="let row of listRows" class="d-flex dada">
+        <div *ngFor="let column of listColumns" [(id)]="row">
+            <input [(id)]="column" type="number" class="m-2" style="width: 40px;" placeholder="a{{row}}{{column}}" (onchange)="getMatrixFromDOM(elem.value)" #elem>
         </div>
     </div>
-</div>
-<div>
-    <button class="m-2">Umn1</button>
-    <button class="m-2">Umn2</button>
-    <button class="m-2">Umn3</button>
-    <button class="m-2">Umn4</button>
 </div>
